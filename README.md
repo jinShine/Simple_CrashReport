@@ -1,7 +1,7 @@
 # Simple Crash Report
 
-임의의 크래쉬가 발생하는 버튼을 만들어 
-스위즐링으로 크래쉬가 난 ViewController 및 메소드를 찾아 CrahLog파일로 저장해서 서버에 사용자 정보를 전달 하는 Simple Crash Report
+임의의 크래쉬가 발생하는 버튼을 만들어<br>
+스위즐링으로 크래쉬가 난 ViewController 및 메소드를 찾아 CrahLog파일로 저장해서 서버에 사용자 정보를 전달하는 Simple Crash Report
 
 ## 기능 소개
 
