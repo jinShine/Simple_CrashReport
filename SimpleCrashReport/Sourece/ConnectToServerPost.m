@@ -14,8 +14,7 @@ DeviceInfo *device = nil;
 @implementation ConnectToServerPost
 
 
--(NSString *)crashLogFilePath
-{
+-(NSString *)crashLogFilePath {
     //해당파일 파일 경로를 읽어들여옴
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -25,8 +24,7 @@ DeviceInfo *device = nil;
     return crashLogPath;
 }
 
-- (void) uploadToCrashLogCollecter
-{
+- (void) uploadToCrashLogCollecter {
 
     //해당파일 파일 경로를 읽어들여옴
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -55,6 +53,7 @@ DeviceInfo *device = nil;
     NSString *UserTel	 = @"-";
     NSString *UserEmail = @"-";
     NSString *Content;
+    
     if(device == nil){
         device = [[DeviceInfo alloc]init];
         Content	 = [NSString stringWithFormat:@"%@\r\n / 지역 : %@ / %@ / Launch Time : %@ / Debug Time : %@",
@@ -99,8 +98,8 @@ DeviceInfo *device = nil;
     NSLog(@"%@", returnString);
 }
 
--(void) uploadToLogReport
-{
+-(void) uploadToLogReport {
+    
     //해당파일 파일 경로를 읽어들여옴
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];

@@ -19,8 +19,7 @@ static DeviceInfo *deviceInfo = nil;
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
 	[super viewDidLoad];
     
     [self supportedInterfaceOrientations];
@@ -30,7 +29,7 @@ static DeviceInfo *deviceInfo = nil;
     return UIInterfaceOrientationMaskPortrait;
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:YES];
     
@@ -42,22 +41,20 @@ static DeviceInfo *deviceInfo = nil;
     
     NSFileManager *manager = [NSFileManager defaultManager];
     
-    if([manager fileExistsAtPath:crashLogPath] && [manager fileExistsAtPath:logFilePath]){
+    if([manager fileExistsAtPath:crashLogPath] && [manager fileExistsAtPath:logFilePath]) {
         [self sendAlertView];
     }
     
 }
 
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
 }
 
 //메모리 비정장 접근 [SIGBUS]
-- (IBAction) onCrash:(id) sender
-{
+- (IBAction) onCrash:(id) sender {
 	NSLog(@"Test");
 	char* invalid = (char*)-1;
 	*invalid = 1;
@@ -92,7 +89,7 @@ static DeviceInfo *deviceInfo = nil;
         NSString *crashLogPath = [documentsDirectory stringByAppendingPathComponent:@"CrashLog.crash"];
         
         NSFileManager *manager = [NSFileManager defaultManager];
-        if([manager fileExistsAtPath:crashLogPath]){
+        if([manager fileExistsAtPath:crashLogPath]) {
             [manager removeItemAtPath:crashLogPath error:nil];
             NSLog(@"파일 삭제 성공");
         }
@@ -113,17 +110,16 @@ static DeviceInfo *deviceInfo = nil;
         NSLog(@"logFilePath : %@", logFilePath);
         
         NSFileManager *manager = [NSFileManager defaultManager];
-        if([manager fileExistsAtPath:crashLogPath] && [manager fileExistsAtPath:logFilePath]){
+        if ([manager fileExistsAtPath:crashLogPath] && [manager fileExistsAtPath:logFilePath]) {
             [manager removeItemAtPath:crashLogPath error:nil];
             [manager removeItemAtPath:logFilePath error:nil];
             NSLog(@"파일 삭제 성공");
         }
-        else{
+        else {
             NSLog(@"파일 삭제 실패");
         }
         
         [alert dismissViewControllerAnimated:YES completion:nil];
-        
         
     }];
     
@@ -134,7 +130,7 @@ static DeviceInfo *deviceInfo = nil;
     
 }
 
--(NSString *)jsonDataPhasing{
+-(NSString *)jsonDataPhasing {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];

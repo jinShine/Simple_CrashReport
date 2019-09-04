@@ -80,6 +80,7 @@
 				C31B2DE81E9787C7002E42AD /* LaunchScreen.storyboard */,
 			);
 			name = Resource;
+			path = Sourece;
 			sourceTree = "<group>";
 		};
 		5C2599021EAE142B005EB563 /* RedirectionLogger */ = {
@@ -96,6 +97,8 @@
 			children = (
 				5C2599021EAE142B005EB563 /* RedirectionLogger */,
 				C31B2DD91E9787C7002E42AD /* Sourece */,
+				15423344211D5D2D0076D1AB /* Resource */,
+				C31B2DDA1E9787C7002E42AD /* Supporting Files */,
 				C31B2DD81E9787C7002E42AD /* Products */,
 				C31B2DF11E978F18002E42AD /* Frameworks */,
 			);
@@ -114,13 +117,11 @@
 			children = (
 				C31B2DDD1E9787C7002E42AD /* AppDelegate.h */,
 				C31B2DDE1E9787C7002E42AD /* AppDelegate.m */,
-				15423344211D5D2D0076D1AB /* Resource */,
-				15423343211D5CF00076D1AB /* Utility */,
 				C31B2DE01E9787C7002E42AD /* ViewController.h */,
 				C31B2DE11E9787C7002E42AD /* ViewController.m */,
 				5C42517F1E9DDAC2005A123D /* ConnectToServerPost.h */,
 				5C4251801E9DDAC2005A123D /* ConnectToServerPost.m */,
-				C31B2DDA1E9787C7002E42AD /* Supporting Files */,
+				15423343211D5CF00076D1AB /* Utility */,
 			);
 			path = Sourece;
 			sourceTree = "<group>";
@@ -133,6 +134,7 @@
 				5CFF2BAD1EA08C2900FEEDAC /* TestCrashReport_Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Sourece;
 			sourceTree = "<group>";
 		};
 		C31B2DF11E978F18002E42AD /* Frameworks */ = {
@@ -185,6 +187,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

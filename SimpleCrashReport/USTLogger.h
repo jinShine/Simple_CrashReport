@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-
-
-@interface USTLogger : NSObject
-{
+@interface USTLogger : NSObject {
     BOOL stdErrRedirected;
-    
 }
+
 @property (nonatomic, assign) BOOL stdErrRedirected;
 
 -(void) writeNSLogToFile;
